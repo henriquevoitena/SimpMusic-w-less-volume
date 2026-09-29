@@ -69,7 +69,7 @@ private const val BAND_RANGE_DB = 12f
  * pinned to the end of the track, which would have shown those profiles sitting at the limit while
  * holding a different number.
  */
-private const val PREAMP_MIN_DB = -15f
+private const val PREAMP_MIN_DB = -40f
 
 private val CURVE_HEIGHT = 240.dp
 
