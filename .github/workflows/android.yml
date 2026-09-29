@@ -61,7 +61,7 @@ jobs:
         run: ./gradlew exportLibraryDefinitions
 
       - name: Build release APK
-        run: ./gradlew androidApp:assembleRelease
+        run: ./gradlew androidApp:assembleDebug
 
       - name: Check build-tools version
         shell: bash
@@ -73,7 +73,7 @@ jobs:
       - uses: kevin-david/zipalign-sign-android-release@v2
         id: sign_app
         with:
-          releaseDirectory: androidApp/build/outputs/apk/release
+          releaseDirectory: androidApp/build/outputs/apk/debug
           signingKeyBase64: ${{ secrets.SIGNING_KEY }}
           alias: ${{ secrets.ALIAS }}
           keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
